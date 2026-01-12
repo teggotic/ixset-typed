@@ -31,6 +31,7 @@ import qualified Data.Map   as Map
 import qualified Data.Map.Strict as Map.Strict
 import           Data.Set   (Set)
 import qualified Data.Set   as Set
+import Protolude
 
 -- the core datatypes
 

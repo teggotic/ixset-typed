@@ -187,10 +187,10 @@ module Data.IxSet.Typed
 )
 where
 
+import Protolude hiding (All, null, empty, toList, groupBy)
+import Data.String
 import Data.Kind
-import Prelude hiding (null)
 
-import           Control.Arrow  (first, second)
 import           Control.DeepSeq
 import qualified Data.Foldable  as Fold
 import           Data.Generics  (Data, gmapQ)
@@ -207,6 +207,10 @@ import           Data.Set       (Set)
 import qualified Data.Set       as Set
 import           Data.Typeable  (Typeable, cast {- , typeOf -})
 import Language.Haskell.TH      as TH hiding (Type)
+import GHC.Show (Show(showsPrec))
+import GHC.Read (Read(readsPrec))
+import Control.Category (Category(id))
+import GHC.Err (error)
 
 --------------------------------------------------------------------------
 -- The main 'IxSet' datatype.
